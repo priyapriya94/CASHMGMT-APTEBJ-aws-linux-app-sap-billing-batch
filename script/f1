@@ -1,0 +1,8 @@
+#!/bin/bash
+mkdir -p /opt/apt/sap-billing
+# Copy Logback file to base app path
+cp -r /tmp/upload/logback.xml /opt/apt/sap-billing/
+# Copy JVM Opts config and application property file to base app path
+cp -r /tmp/upload/sap-billing.conf /tmp/upload/application.yaml /opt/apt/sap-billing/
+chown apt:apt /opt/apt/sap-billing/logback.xml
+chmod 644 /opt/apt/sap-billing/logback.xml
